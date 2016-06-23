@@ -1,6 +1,3 @@
-/**
- * Reset some basic elements
- */
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
@@ -8,10 +5,6 @@ dl, dd, ol, ul, figure {
   padding: 0;
 }
 
-
-/**
- * Basic styling
- */
 body {
     font-family: $base-font-family;
     font-size: $base-font-size;
@@ -22,14 +15,10 @@ body {
     -webkit-text-size-adjust: 100%;
 }
 
-/**
- * Images
- */
-img {
+amp-img {
   max-width: 100%;
   vertical-align: middle;
 }
-
 
 table {
   border-collapse: collapse;
@@ -40,11 +29,7 @@ li {
   list-style-type: none;
 }
 
-
-/**
- * Figures
- */
-figure > img {
+figure > amp-img {
   display: block;
 }
 
@@ -52,10 +37,6 @@ figcaption {
   font-size: $small-font-size;
 }
 
-
-/**
- * Headings
- */
 h1 {
   margin-top: $spacing-unit / 2;
   margin-bottom: $spacing-unit / 4;
@@ -67,9 +48,6 @@ h2, h3, h4, h5, h6 {
 }
 h2 { font-size: 1.25em; }
 
-/**
- * Links
- */
 a {
     color: $brand-color;
     text-decoration: none;
@@ -88,9 +66,6 @@ p {
   margin-bottom: $spacing-unit / 2;
 }
 
-/**
- * Blockquotes
- */
 blockquote {
     color: $grey-color;
     border-left: 4px solid $grey-color-light;
@@ -111,9 +86,6 @@ pre, code {
   line-height: 1.2;
 }
 
-/**
- * Wrapper
- */
 .wrapper {
   max-width: -webkit-calc(800px - (#{$spacing-unit} * 2));
   max-width:         calc(800px - (#{$spacing-unit} * 2));
@@ -131,11 +103,6 @@ pre, code {
   }
 }
 
-
-
-/**
- * Clearfix
- */
 %clearfix {
   &:after {
     content: "";
@@ -148,9 +115,6 @@ pre, code {
   margin-bottom: $spacing-unit / 2;
 }
 
-/**
- * Common
- */
 %muted, .muted {
   font-size: $small-font-size;
   color: #999;

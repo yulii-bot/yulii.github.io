@@ -2,10 +2,10 @@
 layout: compress
 ---
 <!DOCTYPE html>
-<html lang="ja">
+<html amp lang="ja">
 {% include head.html %}
 <body>
-{% include plugins/tracking.html %}
+{% include plugins/analytics.html %}
 {% include header.html %}
 <div class="wrapper">
   {{ content }}
@@ -17,6 +17,5 @@ layout: compress
     {% include schema/{{ name }}.json-ld.html %}
   {% endfor %}
 {% endif %}
-<link rel="stylesheet" property="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </body>
 </html>

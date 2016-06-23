@@ -2,8 +2,8 @@
 {% assign static_paths = site.static_files | map: 'path' %}
 {% if static_paths contains cover_img_path %}
   {% if include.url %}
-<a href="{{ include.url }}"><img src="{{ cover_img_path }}" alt=""></a>
+<a href="{{ include.url }}"><amp-img src="{{ cover_img_path }}" alt="" width="800" height="450" layout="responsive"></amp-img></a>
   {% else %}
-<img src="{{ cover_img_path }}" alt="" class="photo-box">
+<amp-img src="{{ cover_img_path }}" alt="" class="photo-box" width="800" height="450" layout="responsive"></amp-img>
   {% endif %}
 {% endif %}
