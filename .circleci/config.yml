@@ -5,13 +5,15 @@ jobs:
       - image: circleci/ruby:2.4.1
     steps:
       - checkout
-      - type: cache-restore
-        key: yulii-github-io-{{ checksum "Gemfile.lock" }}
-      - run: bundle install --path vendor/bundle --jobs=4
-      - type: cache-save
-        key: yulii-github-io-{{ checksum "Gemfile.lock" }}
-        paths:
-          - vendor/bundle
+      - restore_cache:
+          key: yulii-github-io-{{ checksum "Gemfile.lock" }}
+      - run:
+          name: Install dependencies
+          command: bundle install --path vendor/bundle --jobs=4
+      - save_cache:
+          key: yulii-github-io-{{ checksum "Gemfile.lock" }}
+          paths:
+            - vendor/bundle
 
       - run: bundle exec jekyll build
 
@@ -20,6 +22,9 @@ jobs:
       - image: circleci/ruby:2.4.1
     steps:
       - checkout
+      - run:
+          name: Update dependencies
+          command: bundle update
       - run:
           name: Send auto update pull request
           command: |
